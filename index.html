@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dean Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #4e5054;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: #fff;
+      padding: 10px;
+      display: flex;
+      gap: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #7c1313;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: 0.2s;
+    }
+    nav a:hover {
+      background: #7c1313;
+      color: #fff;
+    }
+    iframe[name="content"] {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="profile-gwe.html" target="content">Profile</a>
+    <a href="about-me.html" target="content">About Me</a>
+    <a href="dokumentasi.html" target="content">Dokumentasi</a>
+    <a href="contact-me.html" target="content">Contact Me</a>
+    <a href="portofolio.html" target="content">Portofolio</a>
+  </nav>
+  <iframe name="content" src="profile-gwe.html"></iframe>

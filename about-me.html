@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --bg: #f3f4f6;
+      --card-bg: #ffffff;
+      --text-dark: #111827;
+      --text-light: #6b7280;
+      --radius: 16px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .btn-kembali {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.2s, transform 0.2s;
+      z-index: 50;
+    }
+    .btn-kembali:hover {
+      background: #3730a3;
+      transform: translateY(-2px);
+    }
+
+    .container {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 650px;
+      margin-top: 70px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .section {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    a.school-link {
+      color: #ef4444;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a.school-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="profile-gwe.html" class="btn-kembali">← Back</a>
+
+  <div class="container">
+    <h1>About Me</h1>
+    <div class="section">
+      <p>
+        Halo, aku <span class="highlight">Muhammad Deandra Sehsanyoto</span>, 
+        kalian bisa panggil aku <span class="highlight">Andra</span>.
+      </p>
+      <p>
+        Aku adalah murid dari sekolah yang sangat berprestasi, yaitu 
+        <a href="https://smkn8malang.sch.id/" target="_blank" class="school-link">SMKN 8 Malang</a>.
+      </p>
+      <p>
+        Aku lahir di Palembang, 23 Februari 2010. Saat ini aku baru saja mendalami dunia IT
+        dan sangat tertarik dengan jaringan komputer.
+      </p>
+      <p>
+        Hobiku: bermain game, menonton anime, mengoleksi figure, dan belajar teknologi baru.
+      </p>
+      <p>
+        Aku juga suka musik, terutama lagu-lagu dari Harum Manis, Deftones, dan Bring Me The Horizon.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

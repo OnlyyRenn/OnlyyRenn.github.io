@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dean Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7c1313;
+      --secondary: #9333ea;
+      --bg: #f3f4f6;
+      --card-bg: #ffffff;
+      --radius: 16px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: #111827;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .nav-link {
+      position: absolute;
+      top: 20px;
+      padding: 10px 18px;
+      background: var(--card-bg);
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+    }
+    .nav-link:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .right { right: 20px; }
+    .right2 { right: 160px; }
+    .left { left: 20px; background: var(--primary); color: #fff; }
+
+    .profile {
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .profile_avatar {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 0 20px rgba(79,70,229,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .profile_avatar:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(147,51,234,0.5);
+    }
+
+    .profile_box {
+      background: linear-gradient(135deg, #ffffff, #f9fafb);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin: 20px auto;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .profile_name {
+      font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
+      margin: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      animation: fadeText 2s ease infinite;
+    }
+    .profile_bio {
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .profile_socials {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .profile_socials a img {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.2s;
+    }
+    .profile_socials a img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeText {
+      0% { opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .profile_avatar { width: 90px; height: 90px; }
+      .nav-link { font-size: 14px; padding: 8px 14px; }
+      .right2 { right: 120px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile">
+    <img src="images/Profile-gweh.png" class="profile_avatar" alt="My profile picture">
+    <div class="profile_box">
+      <h1 class="profile_name" id="dynamic-text">Welcome</h1>
+    </div>
+    <div class="profile_box">
+      <p>Hello Everyone!</p>
+      <p class="profile_bio">
+        Hi, I'm Deandra.<br>
+        I am 15 y.o and I love everything about technology.<br>
+        Student at <strong>SMKN 8 Malang</strong>, currently learning IT Network Support.
+      </p>
+      <a href="https://smkn8malang.sch.id/" target="_blank">
+        <img src="https://smkn8malang.sch.id/img/logo.png" alt="SMKN 8 Malang" width="200">
+      </a>
+      <div class="profile_socials">
+        <a href="https://instagram.com/dxznfsh" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+        </a>
+        <a href="https://steamcommunity.com/profiles/76561199389232268/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam">
+        </a>
+        <a href="https://open.spotify.com/user/31ai7ifayamtshxb5dcnwn2ng4gy" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    const texts = ["Welcome", "Hello", "Selamat Datang", "Hai Semua!"];
+    let idx = 0;
+    const dynamic = document.getElementById('dynamic-text');
+    setInterval(() => {
+      idx = (idx + 1) % texts.length;
+      dynamic.textContent = texts[idx];
+    }, 2500);
+  </script>
+</body>
+</html>
