@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dean Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .profile_avatar {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 100px;
+            height: 100px;
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile_socials {
+            margin-top: 45px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;    
+        }
+        body {
+            background-color: #c4c3c2;
+            color: #333;
+        }
+        .profile_box {
+            background-color: #fffcfc;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            padding: 18px 20px;
+            margin: 18px auto;
+            max-width: 420px;
+            text-align: center;
+        }    
+        .pojok-kanan {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            background: #fffcfc;
+            color: #000000;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            z-index: 10;
+        }
+         .pojok-kiri {
+            position: absolute;
+            top: 24px;
+            left: 32px;
+            background: #ac2828;
+            color: #393837;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            z-index: 10;    
+        }    
+        @media (max-width: 600px) {
+            .profile_avatar {
+                width: 80px;
+                height: 80px;
+            }
+            .profile_box {
+                max-width: 90%;
+            }
+            .pojok-kanan {
+                font-size: 14px;
+                padding: 6px 12px;
+            }        
+        }   
+    </style>
+</head>
+<body>
+    <a href="about-me.html" class="pojok-kanan" style="right: 32px;">About Me</a>
+    <a href="Dokumentasi.html" class="pojok-kanan" style="right: 160px;">Dokumentasi</a>
+    <a href="Contact-me.html" class="pojok-kiri" style="left: 32px;">Contact Me</a>
+    <div class="profile">
+        <header class="profile_header">
+            <div class="profile_avatar_wrapper">
+                <img
+                src="images/Profile-gweh.png" class="profile_avatar"
+                loading="lazy" alt="My profile picture" width="100" height="100">
+            </div>
+        </header>
+        <div class="profile_info">
+            <div class="profile_box">
+                <h1 class="profile_name" id="dynamic-text">Welcome</h1>
+            </div>
+            <div class="profile_box">
+                <p class="profile_instagram">Hello Everyone!</p>
+                <p class="profile_bio">Hi, I'm Deandra.<br>
+                    I am 15th y.o and I love everything about technology.<br>
+                    I am a student at SMKN 8 MALANG and Im currently learning IT Network Support.<br>
+                </p>
+                <a href="https://smkn8malang.sch.id/" target="_blank">
+                    <img src="https://smkn8malang.sch.id/img/logo.png" alt="SMKN 8 Malang" width="350" height="350">
+                </a>
+                <div class="profile_socials">
+                    <a href="https://instagram.com/dxznfsh" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://steamcommunity.com/profiles/76561199389232268/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam" width="24" height="24">
+                    </a>
+                    <a href="https://open.spotify.com/user/31ai7ifayamtshxb5dcnwn2ng4gy" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const texts = ["Welcome", "Hello", "Selamat Datang", "Hai Semua!"];
+        let idx = 0;
+        setInterval(() => {
+            idx = (idx + 1) % texts.length;
+            document.getElementById('dynamic-text').textContent = texts[idx];
+        }, 2000);
+    </script>
+</body>
+</html>
